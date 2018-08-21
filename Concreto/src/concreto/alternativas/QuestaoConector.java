@@ -1,0 +1,281 @@
+package concreto.alternativas;
+
+
+
+import concreto.alternativas.R;
+import android.app.Activity;
+
+
+public class QuestaoConector extends Activity{
+	//variável para tratar a quantidade de questões
+	//Ao total quantas questões há neste programa?
+	protected final int h = 35;
+	
+	//variáveis para tratar os R.string, isto é, as strings do programa
+	protected int[] a = new int[h];
+	protected int[][] b = new int[h][6];
+	
+	public int get_EnderecoDaQuestao(int valor){
+		valor = this.a[valor];
+		return valor;
+	}
+	
+	public int get_QtdeDeQuestoes(){
+		return this.h;
+	}
+	
+	//construtor
+	public QuestaoConector(){
+		//ligando as questões (strings.xml) aos arrays, pois assim poderemos randomizar as questões
+		//ligando as alternativas (strings.xml) aos arrays bidimensional, assim poderemos manter as alternativas às respectivas questões equivalentes, o primeiro [] é referente a questão e o segundo [] à posição da alternativa.
+		b[0][5]=0;
+		a[0]=R.string.q0;
+		b[0][0]=R.string.q0a;
+		b[0][1]=R.string.q0b;
+		b[0][2]=R.string.q0c;
+		b[0][3]=R.string.q0d;
+		b[0][4]=R.string.q0e;
+		b[1][5]=1;
+		a[1]=R.string.q1;
+		b[1][0]=R.string.q1a;
+		b[1][1]=R.string.q1b;
+		b[1][2]=R.string.q1c;
+		b[1][3]=R.string.q1d;
+		b[1][4]=R.string.q1e;
+		b[2][5]=0;
+		a[2]=R.string.q2;
+		b[2][0]=R.string.q2a;
+		b[2][1]=R.string.q2b;
+		b[2][2]=R.string.q2c;
+		b[2][3]=R.string.q2d;
+		b[2][4]=R.string.q2e;
+		b[3][5]=1;
+		a[3]=R.string.q3;
+		b[3][0]=R.string.q3a;
+		b[3][1]=R.string.q3b;
+		b[3][2]=R.string.q3c;
+		b[3][3]=R.string.q3d;
+		b[3][4]=R.string.q3e;
+		b[4][5]=0;
+		a[4]=R.string.q4;
+		b[4][0]=R.string.q4a;
+		b[4][1]=R.string.q4b;
+		b[4][2]=R.string.q4c;
+		b[4][3]=R.string.q4d;
+		b[4][4]=R.string.q4e;
+		b[5][5]=0;
+		a[5]=R.string.q5;
+		b[5][0]=R.string.q5a;
+		b[5][1]=R.string.q5b;
+		b[5][2]=R.string.q5c;
+		b[5][3]=R.string.q5d;
+		b[5][4]=R.string.q5e;
+		b[6][5]=0;
+		a[6]=R.string.q6;
+		b[6][0]=R.string.q6a;
+		b[6][1]=R.string.q6b;
+		b[6][2]=R.string.q6c;
+		b[6][3]=R.string.q6d;
+		b[6][4]=R.string.q6e;
+		b[7][5]=0;
+		a[7]=R.string.q7;
+		b[7][0]=R.string.q7a;
+		b[7][1]=R.string.q7b;
+		b[7][2]=R.string.q7c;
+		b[7][3]=R.string.q7d;
+		b[7][4]=R.string.q7e;
+		b[8][5]=1;
+		a[8]=R.string.q8;
+		b[8][0]=R.string.q8a;
+		b[8][1]=R.string.q8b;
+		b[8][2]=R.string.q8c;
+		b[8][3]=R.string.q8d;
+		b[8][4]=R.string.q8e;
+		b[9][5]=0;
+		a[9]=R.string.q9;
+		b[9][0]=R.string.q9a;
+		b[9][1]=R.string.q9b;
+		b[9][2]=R.string.q9c;
+		b[9][3]=R.string.q9d;
+		b[9][4]=R.string.q9e;
+		b[10][5]=0;
+		a[10]=R.string.q10;
+		b[10][0]=R.string.q10a;
+		b[10][1]=R.string.q10b;
+		b[10][2]=R.string.q10c;
+		b[10][3]=R.string.q10d;
+		b[10][4]=R.string.q10e;
+		b[11][5]=0;
+		a[11]=R.string.q11;
+		b[11][0]=R.string.q11a;
+		b[11][1]=R.string.q11b;
+		b[11][2]=R.string.q11c;
+		b[11][3]=R.string.q11d;
+		b[11][4]=R.string.q11e;
+		b[12][5]=1;
+		a[12]=R.string.q12;
+		b[12][0]=R.string.q12a;
+		b[12][1]=R.string.q12b;
+		b[12][2]=R.string.q12c;
+		b[12][3]=R.string.q12d;
+		b[12][4]=R.string.q12e;
+		b[13][5]=0;
+		a[13]=R.string.q13;
+		b[13][0]=R.string.q13a;
+		b[13][1]=R.string.q13b;
+		b[13][2]=R.string.q13c;
+		b[13][3]=R.string.q13d;
+		b[13][4]=R.string.q13e;
+		b[14][5]=1;
+		a[14]=R.string.q14;
+		b[14][0]=R.string.q14a;
+		b[14][1]=R.string.q14b;
+		b[14][2]=R.string.q14c;
+		b[14][3]=R.string.q14d;
+		b[14][4]=R.string.q14e;
+		b[15][5]=0;
+		a[15]=R.string.q15;
+		b[15][0]=R.string.q15a;
+		b[15][1]=R.string.q15b;
+		b[15][2]=R.string.q15c;
+		b[15][3]=R.string.q15d;
+		b[15][4]=R.string.q15e;
+		b[16][5]=1;
+		a[16]=R.string.q16;
+		b[16][0]=R.string.q16a;
+		b[16][1]=R.string.q16b;
+		b[16][2]=R.string.q16c;
+		b[16][3]=R.string.q16d;
+		b[16][4]=R.string.q16e;
+		b[17][5]=0;
+		a[17]=R.string.q17;
+		b[17][0]=R.string.q17a;
+		b[17][1]=R.string.q17b;
+		b[17][2]=R.string.q17c;
+		b[17][3]=R.string.q17d;
+		b[17][4]=R.string.q17e;
+		b[18][5]=1;
+		a[18]=R.string.q18;
+		b[18][0]=R.string.q18a;
+		b[18][1]=R.string.q18b;
+		b[18][2]=R.string.q18c;
+		b[18][3]=R.string.q18d;
+		b[18][4]=R.string.q18e;
+		b[19][5]=0;
+		a[19]=R.string.q19;
+		b[19][0]=R.string.q19a;
+		b[19][1]=R.string.q19b;
+		b[19][2]=R.string.q19c;
+		b[19][3]=R.string.q19d;
+		b[19][4]=R.string.q19e;
+		b[20][5]=0;
+		a[20]=R.string.q20;
+		b[20][0]=R.string.q20a;
+		b[20][1]=R.string.q20b;
+		b[20][2]=R.string.q20c;
+		b[20][3]=R.string.q20d;
+		b[20][4]=R.string.q20e;
+		b[21][5]=0;
+		a[21]=R.string.q21;
+		b[21][0]=R.string.q21a;
+		b[21][1]=R.string.q21b;
+		b[21][2]=R.string.q21c;
+		b[21][3]=R.string.q21d;
+		b[21][4]=R.string.q21e;
+		b[22][5]=0;
+		a[22]=R.string.q22;
+		b[22][0]=R.string.q22a;
+		b[22][1]=R.string.q22b;
+		b[22][2]=R.string.q22c;
+		b[22][3]=R.string.q22d;
+		b[22][4]=R.string.q22e;
+		b[23][5]=1;
+		a[23]=R.string.q23;
+		b[23][0]=R.string.q23a;
+		b[23][1]=R.string.q23b;
+		b[23][2]=R.string.q23c;
+		b[23][3]=R.string.q23d;
+		b[23][4]=R.string.q23e;
+		b[24][5]=1;
+		a[24]=R.string.q24;
+		b[24][0]=R.string.q24a;
+		b[24][1]=R.string.q24b;
+		b[24][2]=R.string.q24c;
+		b[24][3]=R.string.q24d;
+		b[24][4]=R.string.q24e;
+		b[25][5]=0;
+		a[25]=R.string.q25;
+		b[25][0]=R.string.q25a;
+		b[25][1]=R.string.q25b;
+		b[25][2]=R.string.q25c;
+		b[25][3]=R.string.q25d;
+		b[25][4]=R.string.q25e;
+		b[26][5]=0;
+		a[26]=R.string.q26;
+		b[26][0]=R.string.q26a;
+		b[26][1]=R.string.q26b;
+		b[26][2]=R.string.q26c;
+		b[26][3]=R.string.q26d;
+		b[26][4]=R.string.q26e;
+		b[27][5]=2;
+		a[27]=R.string.q27;
+		b[27][0]=R.string.q27a;
+		b[27][1]=R.string.q27b;
+		b[27][2]=R.string.q27c;
+		b[27][3]=R.string.q27d;
+		b[27][4]=R.string.q27e;
+		b[28][5]=1;
+		a[28]=R.string.q28;
+		b[28][0]=R.string.q28a;
+		b[28][1]=R.string.q28b;
+		b[28][2]=R.string.q28c;
+		b[28][3]=R.string.q28d;
+		b[28][4]=R.string.q28e;
+		b[29][5]=1;
+		a[29]=R.string.q29;
+		b[29][0]=R.string.q29a;
+		b[29][1]=R.string.q29b;
+		b[29][2]=R.string.q29c;
+		b[29][3]=R.string.q29d;
+		b[29][4]=R.string.q29e;
+		b[30][5]=3;
+		a[30]=R.string.q30;
+		b[30][0]=R.string.q30a;
+		b[30][1]=R.string.q30b;
+		b[30][2]=R.string.q30c;
+		b[30][3]=R.string.q30d;
+		b[30][4]=R.string.q30e;
+		b[31][5]=4;
+		a[31]=R.string.q31;
+		b[31][0]=R.string.q31a;
+		b[31][1]=R.string.q31b;
+		b[31][2]=R.string.q31c;
+		b[31][3]=R.string.q31d;
+		b[31][4]=R.string.q31e;
+		b[32][5]=0;
+		a[32]=R.string.q32;
+		b[32][0]=R.string.q32a;
+		b[32][1]=R.string.q32b;
+		b[32][2]=R.string.q32c;
+		b[32][3]=R.string.q32d;
+		b[32][4]=R.string.q32e;
+		b[33][5]=4;
+		a[33]=R.string.q33;
+		b[33][0]=R.string.q33a;
+		b[33][1]=R.string.q33b;
+		b[33][2]=R.string.q33c;
+		b[33][3]=R.string.q33d;
+		b[33][4]=R.string.q33e;
+		b[34][5]=1;
+		a[34]=R.string.q34;
+		b[34][0]=R.string.q34a;
+		b[34][1]=R.string.q34b;
+		b[34][2]=R.string.q34c;
+		b[34][3]=R.string.q34d;
+		b[34][4]=R.string.q34e;
+
+
+
+
+	}
+}
